@@ -20,23 +20,22 @@ class Ui_Sec_Window(object):
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit.setGeometry(QtCore.QRect(10, 10, 551, 81))
         font = QtGui.QFont()
-        font.setFamily("Noto Sans")
-        font.setPointSize(16)
+        font.setFamily("Times New Roman")
+        font.setPointSize(32)
         self.textEdit.setFont(font)
-        self.textEdit.setStatusTip("")
         self.textEdit.setStyleSheet("")
         self.textEdit.setPlaceholderText("")
         self.textEdit.setObjectName("textEdit")
-        self.textEdit.setPlaceholderText("Введите тему...")
+        self.textEdit.setAlignment(QtCore.Qt.AlignCenter)
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton.setGeometry(QtCore.QRect(244, 682, 101, 101))
+        self.pushButton.setGeometry(QtCore.QRect(30, 680, 101, 101))
         self.pushButton.setStyleSheet("border-radius: 50px;   \n"
 "border: 2px solid #094065;\n"
 "background-color: rgb(84, 255, 170);")
-        self.pushButton.setIcon(QtGui.QIcon('back.png'))
-        self.pushButton.setIconSize(QtCore.QSize(80, 80))
         self.pushButton.setText("")
         self.pushButton.setObjectName("pushButton")
+        self.pushButton.setIcon(QtGui.QIcon('picture/back.png'))
+        self.pushButton.setIconSize(QtCore.QSize(50, 50))
         self.textEdit_2 = QtWidgets.QTextEdit(self.centralwidget)
         self.textEdit_2.setGeometry(QtCore.QRect(10, 100, 551, 571))
         font = QtGui.QFont()
@@ -44,11 +43,17 @@ class Ui_Sec_Window(object):
         font.setPointSize(16)
         self.textEdit_2.setFont(font)
         self.textEdit_2.setObjectName("textEdit_2")
-        self.textEdit_2.setPlaceholderText("Введите описание, если необходимо")
+        self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_2.setGeometry(QtCore.QRect(440, 680, 101, 101))
+        self.pushButton_2.setStyleSheet("border-radius: 50px;   \n"
+"border: 2px solid #094065;\n"
+"background-color: rgb(84, 255, 170);")
+        self.pushButton_2.setText("")
+        self.pushButton_2.setObjectName("pushButton_2")
+        self.pushButton_2.setIcon(QtGui.QIcon('picture/trash.png'))
+        self.pushButton_2.setIconSize(QtCore.QSize(50, 50))
         MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(MainWindow)
-        self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
@@ -56,4 +61,3 @@ class Ui_Sec_Window(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
-
