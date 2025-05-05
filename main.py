@@ -112,7 +112,6 @@ class Planner(QtWidgets.QMainWindow):
         end_ind = min(start_ind+4, num_task)
         for ind in range(start_ind, end_ind):
             record_id = data[ind][0]
-            print(record_id)
             self.create_butt_task(data[ind][1], ind)
             self.create_butt_mark(ind, data[ind][-1])
             self.buttons_task[ind].clicked.connect(partial(self.show_sec_window, record_id))
